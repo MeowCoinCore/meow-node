@@ -725,7 +725,7 @@ TEST (node_config, v15_v16_upgrade)
 	};
 
 	// Check that upgrades work with both
-	test_upgrade ("livenet.meow-coin.cf", "livenet.meow-coin.cf");
+	test_upgrade ("::ffff:89.216.106.116", "::ffff:89.216.106.116");
 	test_upgrade ("betanet.meow-coin.cf", "betanet.meow-coin.cf");
 }
 
