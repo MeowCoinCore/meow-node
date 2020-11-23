@@ -25,3 +25,6 @@
 	path = rocksdb
 	url = https://github.com/nanocurrency/rocksdb.git
 	branch = 6.13.3
+[submodule "nano-pow-server"]
+	path = nano-pow-server
+	url = https://github.com/MeowCoinCore/nano-pow-server.git
