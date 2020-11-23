@@ -319,7 +319,7 @@ TEST (toml, base_override)
 {
 	std::stringstream ss_base;
 	ss_base << R"toml(
-	        node.peering_port=7075
+	        node.peering_port=1999
 	)toml";
 
 	std::stringstream ss_override;
@@ -362,12 +362,12 @@ TEST (toml, put)
 	nano::tomlconfig config;
 	nano::tomlconfig config_node;
 	// Overwrite value and add to child node
-	config_node.put ("port", "7074");
-	config_node.put ("port", "7075");
+	config_node.put ("port", "999");
+	config_node.put ("port", "1999");
 	config.put_child ("node", config_node);
 	uint16_t port;
 	config.get_required<uint16_t> ("node.port", port);
-	ASSERT_EQ (port, 7075);
+	ASSERT_EQ (port, 1999);
 	ASSERT_FALSE (config.get_error ());
 }
 
