@@ -3778,7 +3778,7 @@ TEST (rpc, mrai_to_raw)
 	nano::rpc rpc (system.io_ctx, rpc_config, ipc_rpc_processor);
 	rpc.start ();
 	boost::property_tree::ptree request1;
-	request1.put ("action", "mrai_to_raw");
+	request1.put ("action", "mcat_to_raw");
 	request1.put ("amount", "1");
 	test_response response1 (request1, rpc.config.port, system.io_ctx);
 	system.deadline_set (5s);
@@ -3803,7 +3803,7 @@ TEST (rpc, mrai_from_raw)
 	nano::rpc rpc (system.io_ctx, rpc_config, ipc_rpc_processor);
 	rpc.start ();
 	boost::property_tree::ptree request1;
-	request1.put ("action", "mrai_from_raw");
+	request1.put ("action", "mcat_from_raw");
 	request1.put ("amount", nano::Mxrb_ratio.convert_to<std::string> ());
 	test_response response1 (request1, rpc.config.port, system.io_ctx);
 	system.deadline_set (5s);
@@ -3828,7 +3828,7 @@ TEST (rpc, krai_to_raw)
 	nano::rpc rpc (system.io_ctx, rpc_config, ipc_rpc_processor);
 	rpc.start ();
 	boost::property_tree::ptree request1;
-	request1.put ("action", "krai_to_raw");
+	request1.put ("action", "kcat_to_raw");
 	request1.put ("amount", "1");
 	test_response response1 (request1, rpc.config.port, system.io_ctx);
 	system.deadline_set (5s);
@@ -3853,7 +3853,7 @@ TEST (rpc, krai_from_raw)
 	nano::rpc rpc (system.io_ctx, rpc_config, ipc_rpc_processor);
 	rpc.start ();
 	boost::property_tree::ptree request1;
-	request1.put ("action", "krai_from_raw");
+	request1.put ("action", "kcat_from_raw");
 	request1.put ("amount", nano::kxrb_ratio.convert_to<std::string> ());
 	test_response response1 (request1, rpc.config.port, system.io_ctx);
 	system.deadline_set (5s);
@@ -3878,7 +3878,7 @@ TEST (rpc, nano_to_raw)
 	nano::rpc rpc (system.io_ctx, rpc_config, ipc_rpc_processor);
 	rpc.start ();
 	boost::property_tree::ptree request1;
-	request1.put ("action", "nano_to_raw");
+	request1.put ("action", "meow_to_raw");
 	request1.put ("amount", "1");
 	test_response response1 (request1, rpc.config.port, system.io_ctx);
 	system.deadline_set (5s);
@@ -3903,7 +3903,7 @@ TEST (rpc, nano_from_raw)
 	nano::rpc rpc (system.io_ctx, rpc_config, ipc_rpc_processor);
 	rpc.start ();
 	boost::property_tree::ptree request1;
-	request1.put ("action", "nano_from_raw");
+	request1.put ("action", "meow_from_raw");
 	request1.put ("amount", nano::xrb_ratio.convert_to<std::string> ());
 	test_response response1 (request1, rpc.config.port, system.io_ctx);
 	system.deadline_set (5s);

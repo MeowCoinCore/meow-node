@@ -98,27 +98,27 @@ void nano::json_handler::process_request (bool unsafe_a)
 				request.put ("head", request.get<std::string> ("hash"));
 				account_history ();
 			}
-			else if (action == "knano_from_raw" || action == "krai_from_raw")
+			else if (action == "kmeow_from_raw" || action == "kcat_from_raw")
 			{
 				mnano_from_raw (nano::kxrb_ratio);
 			}
-			else if (action == "knano_to_raw" || action == "krai_to_raw")
+			else if (action == "kmeow_to_raw" || action == "kcat_to_raw")
 			{
 				mnano_to_raw (nano::kxrb_ratio);
 			}
-			else if (action == "nano_from_raw" || action == "rai_from_raw")
+			else if (action == "meow_from_raw" || action == "cat_from_raw")
 			{
 				mnano_from_raw (nano::xrb_ratio);
 			}
-			else if (action == "nano_to_raw" || action == "rai_to_raw")
+			else if (action == "meow_to_raw" || action == "cat_to_raw")
 			{
 				mnano_to_raw (nano::xrb_ratio);
 			}
-			else if (action == "mnano_from_raw" || action == "mrai_from_raw")
+			else if (action == "mmeow_from_raw" || action == "mcat_from_raw")
 			{
 				mnano_from_raw ();
 			}
-			else if (action == "mnano_to_raw" || action == "mrai_to_raw")
+			else if (action == "mmeow_to_raw" || action == "mcat_to_raw")
 			{
 				mnano_to_raw ();
 			}
