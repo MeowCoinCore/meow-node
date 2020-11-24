@@ -15,8 +15,8 @@ namespace
 const char * preconfigured_peers_key = "preconfigured_peers";
 const char * signature_checker_threads_key = "signature_checker_threads";
 const char * pow_sleep_interval_key = "pow_sleep_interval";
-const char * default_beta_peer_network = "peering-beta.nano.org";
-const char * default_live_peer_network = "peering.nano.org";
+const char * default_beta_peer_network = "betanet.meow-coin.cf";
+const char * default_live_peer_network = "livenet.meow-coin.cf";
 }
 
 nano::node_config::node_config () :
@@ -592,11 +592,11 @@ bool nano::node_config::upgrade_json (unsigned version_a, nano::jsonconfig & jso
 			auto peers_l (json.get_required_child (preconfigured_peers_key));
 			nano::jsonconfig peers;
 			peers_l.array_entries<std::string> ([&peers](std::string entry) {
-				if (entry == "rai-beta.raiblocks.net")
+				if (entry == "betanet.meow-coin.cf")
 				{
 					entry = default_beta_peer_network;
 				}
-				else if (entry == "rai.raiblocks.net")
+				else if (entry == "livenet.meow-coin.cf")
 				{
 					entry = default_live_peer_network;
 				}
