@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=nanocurrency
-WorkingDirectory=/var/nanocurrency/NanoBeta
+WorkingDirectory=/var/nanocurrency/MeowBeta
 ExecStart=/usr/bin/nano_node-beta --daemon
 Restart=on-failure
 
